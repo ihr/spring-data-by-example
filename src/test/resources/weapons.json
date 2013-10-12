@@ -1,0 +1,21 @@
+[
+    {
+        "_id": "Lightbringer",
+        "_class": "org.ingini.mongodb.spring.example.domain.weapons.Weapon"
+    },
+    {
+        "_id": "Longclaw",
+        "_class": "org.ingini.mongodb.spring.example.domain.weapons.Weapon",
+        "material": "Valyrian steel"
+    },
+    {
+        "_id": "Dark Sister",
+        "_class": "org.ingini.mongodb.spring.example.domain.weapons.Weapon",
+        "material": "Valyrian steel"
+    },
+    {
+        "_id": "Ice",
+        "_class": "org.ingini.mongodb.spring.example.domain.weapons.Weapon",
+        "material": "Valyrian steel"
+    }
+]
