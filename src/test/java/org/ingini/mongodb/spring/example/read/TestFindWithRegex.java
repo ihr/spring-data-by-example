@@ -34,7 +34,7 @@ import static org.fest.assertions.Assertions.assertThat;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = {AppConfig.class})
-public class TestFind {
+public class TestFindWithRegex {
     public static final String WEAPONS = "weapons";
 
     @Autowired
