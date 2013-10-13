@@ -89,13 +89,14 @@ public class TestFindOne {
         CollectionManager.cleanAndFill(mongoTemplate.getDb(), "characters.json", HumanCharacter.COLLECTION_NAME);
 
         //WHEN
-        Heroine heroine = mongoTemplate.findOne(new BasicQuery(
+        Hero hero = mongoTemplate.findOne(new BasicQuery(
                 Query.query(Criteria.where("_id").is(new ObjectId("52516b563004ba6b745e864f"))).getQueryObject(),
                 Query.query(Criteria.where("children").elemMatch(
-                        Criteria.where("first_name").is("Sansa").and("last_name").is("Stark"))).getFieldsObject()), Heroine.class);
+                        Criteria.where("first_name").is("Sansa").and("last_name").is("Stark"))).getFieldsObject()), Hero.class);
 
         //THEN
-        assertThat(heroine).isNotNull();
+        assertThat(hero).isNotNull();
+        assertThat(hero.getFirstName()).isEqualTo("Eddard");
 
     }
 }
