@@ -3,7 +3,7 @@ package org.ingini.mongodb.spring.example.domain.aggregation;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-import static org.ingini.mongodb.spring.example.domain.aggregation.StateData.*;
+import static org.ingini.mongodb.spring.example.domain.zip.ZipData.COLLECTION_NAME;
 
 /**
  * Copyright (c) 2013 Ivan Hristov
@@ -22,8 +22,6 @@ import static org.ingini.mongodb.spring.example.domain.aggregation.StateData.*;
  */
 @Document(collection = COLLECTION_NAME)
 public class StateData {
-
-    public static final String COLLECTION_NAME = "zip_codes";
 
     private final String state;
     @Field("pop")

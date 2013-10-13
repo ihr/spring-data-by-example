@@ -1,4 +1,4 @@
-package org.ingini.mongodb.spring.example.domain.heroes;
+package org.ingini.mongodb.spring.example.domain.characters;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
@@ -8,6 +8,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
 import java.util.Set;
+
+import static org.ingini.mongodb.spring.example.domain.characters.HumanCharacter.*;
 
 /**
  * Copyright (c) 2013 Ivan Hristov
@@ -24,8 +26,10 @@ import java.util.Set;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-@Document(collection = "heroes")
-public abstract class Human {
+@Document(collection = COLLECTION_NAME)
+public abstract class HumanCharacter {
+
+    public static final String COLLECTION_NAME = "characters";
 
     private ObjectId id;
 
@@ -39,21 +43,21 @@ public abstract class Human {
 
     private Address address;
 
-    private Set<Human> children;
+    private Set<HumanCharacter> children;
 
     private Set<Beast> beasts;
 
-    protected Human() {
+    protected HumanCharacter() {
 
     }
 
-    protected Human(String firstName, String lastName, Gender gender, Address address,
-                    Set<Human> children, Set<Beast> beasts) {
+    protected HumanCharacter(String firstName, String lastName, Gender gender, Address address,
+                             Set<HumanCharacter> children, Set<Beast> beasts) {
        this(null, firstName, lastName, gender, address, children, beasts);
     }
 
-    protected Human(ObjectId id, String firstName, String lastName, Gender gender, Address address,
-                    Set<Human> children, Set<Beast> beasts) {
+    protected HumanCharacter(ObjectId id, String firstName, String lastName, Gender gender, Address address,
+                             Set<HumanCharacter> children, Set<Beast> beasts) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -83,7 +87,7 @@ public abstract class Human {
         return address;
     }
 
-    public Set<Human> getChildren() {
+    public Set<HumanCharacter> getChildren() {
         return children;
     }
 
@@ -96,11 +100,11 @@ public abstract class Human {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Human human = (Human) o;
+        HumanCharacter humanCharacter = (HumanCharacter) o;
 
-        return new EqualsBuilder().append(this.firstName, human.firstName).append(this.lastName, human.lastName)
-                .append(this.gender, human.gender).append(this.address, this.address)
-                .append(this.beasts, human.beasts).isEquals();
+        return new EqualsBuilder().append(this.firstName, humanCharacter.firstName).append(this.lastName, humanCharacter.lastName)
+                .append(this.gender, humanCharacter.gender).append(this.address, this.address)
+                .append(this.beasts, humanCharacter.beasts).isEquals();
     }
 
     @Override

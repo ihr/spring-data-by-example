@@ -2,7 +2,7 @@ package org.ingini.mongodb.spring.example.create;
 
 import com.google.common.collect.Sets;
 import org.ingini.mongodb.spring.example.configuration.AppConfig;
-import org.ingini.mongodb.spring.example.domain.heroes.*;
+import org.ingini.mongodb.spring.example.domain.characters.*;
 import org.ingini.mongodb.spring.example.domain.weapons.Weapon;
 import org.junit.Before;
 import org.junit.Test;
@@ -33,15 +33,12 @@ import java.util.Set;
 @ContextConfiguration(classes = {AppConfig.class})
 public class TestInsertion {
 
-    public static final String HEROES = "heroes";
-    public static final String WEAPONS = "weapons";
-
     @Autowired
     private MongoTemplate mongoTemplate;
 
     @Before
     public void beforeEachTest() {
-        mongoTemplate.dropCollection(HEROES);
+        mongoTemplate.dropCollection(HumanCharacter.COLLECTION_NAME);
     }
 
     @Test
@@ -61,7 +58,7 @@ public class TestInsertion {
         //GIVEN
         Address castleWinterfell = new Address("Winterfell", "Westeros", Region.THE_NORTH);
 
-        Set<Human> children = Sets.newHashSet();
+        Set<HumanCharacter> children = Sets.newHashSet();
         children.add(Hero.createHeroWithoutChildrenAndNoBeasts("Robb", "Stark", castleWinterfell));
         children.add(Heroine.createHeroineWithoutChildrenAndNoBeasts("Sansa", "Stark", castleWinterfell));
         children.add(Heroine.createHeroineWithoutChildrenAndNoBeasts("Arya", "Stark", castleWinterfell));

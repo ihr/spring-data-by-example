@@ -5,6 +5,7 @@ import org.ingini.mongodb.spring.example.domain.aggregation.AggregatedNameData;
 import org.ingini.mongodb.spring.example.domain.aggregation.AggregatedStateData;
 import org.ingini.mongodb.spring.example.domain.aggregation.NameData;
 import org.ingini.mongodb.spring.example.domain.aggregation.StateData;
+import org.ingini.mongodb.spring.example.domain.zip.ZipData;
 import org.ingini.mongodb.spring.example.util.CollectionManager;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -56,7 +57,7 @@ public class TestAggregationFramework {
     @Test
     public void shouldFindAllStatesWithPopulationOver10Millions() {
         //GIVEN
-        CollectionManager.cleanAndFill(mongoTemplate.getDb(), "zips.json", StateData.COLLECTION_NAME);
+        CollectionManager.cleanAndFill(mongoTemplate.getDb(), "zips.json", ZipData.COLLECTION_NAME);
         int lowerLimit = 10 * 1000 * 1000;
 
         //WHEN

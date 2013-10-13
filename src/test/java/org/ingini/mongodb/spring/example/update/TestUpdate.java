@@ -4,9 +4,9 @@ import com.google.common.collect.Sets;
 import org.bson.types.ObjectId;
 import org.ingini.mongodb.spring.example.configuration.AppConfig;
 import org.ingini.mongodb.spring.example.domain.beasts.DireWolf;
-import org.ingini.mongodb.spring.example.domain.heroes.Hero;
-import org.ingini.mongodb.spring.example.domain.heroes.Heroine;
-import org.ingini.mongodb.spring.example.domain.heroes.Human;
+import org.ingini.mongodb.spring.example.domain.characters.Hero;
+import org.ingini.mongodb.spring.example.domain.characters.Heroine;
+import org.ingini.mongodb.spring.example.domain.characters.HumanCharacter;
 import org.ingini.mongodb.spring.example.domain.weapons.Weapon;
 import org.ingini.mongodb.spring.example.domain.weapons.WeaponDetails;
 import org.ingini.mongodb.spring.example.util.CollectionManager;
@@ -43,7 +43,6 @@ import static org.fest.assertions.Assertions.assertThat;
 @ContextConfiguration(classes = {AppConfig.class})
 public class TestUpdate {
 
-    public static final String HEROES = "heroes";
     public static final String WEAPONS = "weapons";
 
     @Autowired
@@ -72,14 +71,14 @@ public class TestUpdate {
     @Test
     public void shouldAddADireWolfForEachStarkChild() {
         //GIVEN
-        CollectionManager.cleanAndFill(mongoTemplate.getDb(), "heroes.json", HEROES);
+        CollectionManager.cleanAndFill(mongoTemplate.getDb(), "characters.json", HumanCharacter.COLLECTION_NAME);
 
         Hero eddardStark = mongoTemplate.findOne(Query.query(
                 Criteria.where("_id").is(new ObjectId("5259a7fd3004e5974542c5e9"))), Hero.class);
 
-        Set<Human> updatedChildren = Sets.newHashSet();
+        Set<HumanCharacter> updatedChildren = Sets.newHashSet();
 
-        for (Human child : eddardStark.getChildren()) {
+        for (HumanCharacter child : eddardStark.getChildren()) {
             if (child.getFirstName().equals("Robb")) {
                 updatedChildren.add(Hero.addBeast((Hero) child, new DireWolf("Grey Wind")));
             }

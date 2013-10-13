@@ -1,4 +1,4 @@
-package org.ingini.mongodb.spring.example.domain.heroes;
+package org.ingini.mongodb.spring.example.domain.characters;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;

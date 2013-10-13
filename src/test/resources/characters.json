@@ -14,7 +14,7 @@
     {
         "gender": "MALE",
         "_id": "5259a7fd3004e5974542c5e9",
-        "_class": "org.ingini.mongodb.spring.example.domain.heroes.Hero",
+        "_class": "org.ingini.mongodb.spring.example.domain.characters.Hero",
         "first_name": "Eddard",
         "last_name": "Stark",
         "address": {
@@ -25,7 +25,7 @@
         "children": [
             {
                 "gender": "MALE",
-                "_class": "org.ingini.mongodb.spring.example.domain.heroes.Hero",
+                "_class": "org.ingini.mongodb.spring.example.domain.characters.Hero",
                 "first_name": "Jon",
                 "last_name": "Snow",
                 "address": {
@@ -36,7 +36,7 @@
             },
             {
                 "gender": "MALE",
-                "_class": "org.ingini.mongodb.spring.example.domain.heroes.Hero",
+                "_class": "org.ingini.mongodb.spring.example.domain.characters.Hero",
                 "first_name": "Rickon",
                 "last_name": "Stark",
                 "address": {
@@ -47,7 +47,7 @@
             },
             {
                 "gender": "FEMALE",
-                "_class": "org.ingini.mongodb.spring.example.domain.heroes.Heroine",
+                "_class": "org.ingini.mongodb.spring.example.domain.characters.Heroine",
                 "first_name": "Sansa",
                 "last_name": "Stark",
                 "address": {
@@ -58,7 +58,7 @@
             },
             {
                 "gender": "FEMALE",
-                "_class": "org.ingini.mongodb.spring.example.domain.heroes.Heroine",
+                "_class": "org.ingini.mongodb.spring.example.domain.characters.Heroine",
                 "first_name": "Arya",
                 "last_name": "Stark",
                 "address": {
@@ -69,7 +69,7 @@
             },
             {
                 "gender": "MALE",
-                "_class": "org.ingini.mongodb.spring.example.domain.heroes.Hero",
+                "_class": "org.ingini.mongodb.spring.example.domain.characters.Hero",
                 "first_name": "Robb",
                 "last_name": "Stark",
                 "address": {
@@ -80,7 +80,7 @@
             },
             {
                 "gender": "MALE",
-                "_class": "org.ingini.mongodb.spring.example.domain.heroes.Hero",
+                "_class": "org.ingini.mongodb.spring.example.domain.characters.Hero",
                 "first_name": "Bran",
                 "last_name": "Stark",
                 "address": {
@@ -96,7 +96,7 @@
     {
         "gender": "MALE",
         "_id": "52516b563004ba6b745e864f",
-        "_class": "org.ingini.mongodb.spring.example.domain.heroes.Hero",
+        "_class": "org.ingini.mongodb.spring.example.domain.characters.Hero",
         "first_name": "Eddard",
         "last_name": "Stark",
         "address": {
@@ -121,7 +121,7 @@
                     }
                 ],
                 "gender": "FEMALE",
-                "_class": "org.ingini.mongodb.spring.example.domain.heroes.Heroine"
+                "_class": "org.ingini.mongodb.spring.example.domain.characters.Heroine"
             },
             {
                 "gender": "FEMALE",
@@ -139,7 +139,7 @@
                     }
                 ],
                 "gender": "FEMALE",
-                "_class": "org.ingini.mongodb.spring.example.domain.heroes.Heroine"
+                "_class": "org.ingini.mongodb.spring.example.domain.characters.Heroine"
             },
             {
                 "gender": "MALE",
@@ -157,7 +157,7 @@
                     }
                 ],
                 "gender": "MALE",
-                "_class": "org.ingini.mongodb.spring.example.domain.heroes.Hero"
+                "_class": "org.ingini.mongodb.spring.example.domain.characters.Hero"
             },
             {
                 "gender": "MALE",
@@ -175,7 +175,7 @@
                     }
                 ],
                 "gender": "MALE",
-                "_class": "org.ingini.mongodb.spring.example.domain.heroes.Hero"
+                "_class": "org.ingini.mongodb.spring.example.domain.characters.Hero"
             },
             {
                 "gender": "MALE",
@@ -193,7 +193,7 @@
                     }
                 ],
                 "gender": "MALE",
-                "_class": "org.ingini.mongodb.spring.example.domain.heroes.Hero"
+                "_class": "org.ingini.mongodb.spring.example.domain.characters.Hero"
             },
             {
                 "gender": "MALE",
@@ -211,7 +211,7 @@
                     }
                 ],
                 "gender": "MALE",
-                "_class": "org.ingini.mongodb.spring.example.domain.heroes.Hero"
+                "_class": "org.ingini.mongodb.spring.example.domain.characters.Hero"
             }
         ],
         "gender": "MALE"
